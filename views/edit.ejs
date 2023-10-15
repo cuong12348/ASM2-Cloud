@@ -68,12 +68,8 @@
                 <input type="text" id="ProductName" name="ProductName" value="<%= Product.name %>" required>
                 <label for = "Price">Price:</label>
                 <input type="number" min="0" id="Price" name="Price" value="<% Product.Price %>" required>
-                <label for="image" class="form-label">Select Images</label>
-                <input class="form-control form-control-lg" type="file" name="image" required/>
-                <img src="<%=Product.image%>" width="100" class="img-thumbnail mt-1"/>
                 <button> Edit Product </button>  
             </form>
-            <input type="hidden" name="old_image" value="<%= Product.image %>"/>
         </div>
     </div>
     <script src="index.js"></script>

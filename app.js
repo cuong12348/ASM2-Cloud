@@ -74,13 +74,14 @@ app.get('/Product/delete/:id',(req,res)=>{
 
 })
 app.get('/Product/edit/:id',(req,res)=>{
-    let id =req.params.id;
-    Product.findById(id)
+    const id =req.params.id;
+    Product.findById(ObjectId(id))
      .then(result=>{
-        res.redirect('/edit');
+        res.redirect('/Product/edit/:id', {Product: result});
      
     })
     .catch(err =>{
         console.log(err);
     })
 })
+
