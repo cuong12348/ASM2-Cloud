@@ -62,18 +62,18 @@
       <!-- End of Navbar -->
       <div class="create-blog content">
           <form action="/Product" method="POSt">
-          <label for = "ProductID">ProductID: </label>
-          <input type="text" id="ProductID" name="ProductID" required>
-          <label for = "ProductName">ProductName: </label>
-          <input type="text" id="ProductName" name="ProductName" required>
-          <label for = "Price">Price:</label>
-          <input type="number" min="0" id="Price" name="Price" required>
-          <button> Add Product </button>  
+            <label for = "ProductID">ProductID: </label>
+            <input type="text" id="ProductID" name="ProductID" required>
+            <label for = "ProductName">ProductName: </label>
+            <input type="text" id="ProductName" name="ProductName" required>
+            <label for = "Price">Price:</label>
+            <input type="number" min="0" id="Price" name="Price" required>
+            <label for = "Description">Description:</label>
+            <textarea type="text" id="Description" name="Description" required></textarea>
+            <button class="mt-4"> Add Product </button>  
           </form>
       </div>
     </div>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css" />
     <%- include('./partials/footer.ejs') %>
   </body>
 

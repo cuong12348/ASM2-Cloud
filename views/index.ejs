@@ -79,8 +79,8 @@
                 <tr>
                   <th>ID</th>
                   <th>Product Name</th>
-                  <th>Picture</th>
                   <th>Price</th>
+                  <th>Decription</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -90,8 +90,8 @@
                 <tr onclick="edit(this)">
                   <td><%= Product.ProductID %></td>
                   <td><%= Product.ProductName %></td>
-                  <td></td>
                   <td><%= Product.Price %></td>
+                  <td><%= Product.Description %></td>
                   <td>
                     <a href="/Product/edit/<%=Product._id %>" type="button" class="btn btn-primary btn-sm">Edit</a>
                     <a href="/Product/delete/<%= Product._id %>" type="button" class="btn btn-primary btn-sm">Delete</a>
@@ -107,8 +107,6 @@
         </div>
       </main>
     </div>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css" />
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>

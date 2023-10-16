@@ -4,7 +4,6 @@ const Product = require('./models/Product');
 const { render } = require('ejs');
 const { restart } = require('nodemon');
 
-
 // express app
 const app = express();
 //Connect to mongodb
@@ -32,6 +31,7 @@ app.get('/Product/create', (req,res)=>{
 app.post('/Product',(req,res)=>{
   const product = new Product(req.body);
 
+  
   product.save()
     .then((result)=>{
         res.redirect('/Product')
@@ -75,9 +75,9 @@ app.get('/Product/delete/:id',(req,res)=>{
 })
 app.get('/Product/edit/:id',(req,res)=>{
     const id =req.params.id;
-    Product.findById(ObjectId(id))
+    Product.findById(id)
      .then(result=>{
-        res.redirect('/Product/edit/:id', {Product: result});
+        res.render(`/Product/edit/:id`);
      
     })
     .catch(err =>{
