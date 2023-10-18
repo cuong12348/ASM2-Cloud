@@ -50,6 +50,8 @@ app.get('/Product',(req,res)=>{
             console.log(err);
         })
 })
+
+
 app.get('/Product/:id',(req,res)=>{
     const id = req.params.id;
     Product.findById(id)
@@ -84,4 +86,7 @@ app.get('/Product/edit/:id',(req,res)=>{
         console.log(err);
     })
 })
+
+
+
 
